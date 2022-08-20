@@ -19,6 +19,11 @@ public class EncabezadoService implements IEncabezadoService {
     }
 
     @Override
+    public void crearEncabezado(Encabezado enc) {
+       encaRepo.save(enc);
+    }
+    
+    @Override
     public void editarEncabezado(Encabezado enc) {
        encaRepo.save(enc);
     }
