@@ -17,18 +17,18 @@ public class Controller {
     @Autowired
     private IEncabezadoService encaServ;
     
-    @GetMapping ("/ver/encabezado")
+    @GetMapping ("api/ver/encabezado")
     @ResponseBody
     public List<Encabezado> verEncabezado(){
         return encaServ.verEncabezado();
     }
     
-    @PostMapping ("/crear/encabezado")
+    @PostMapping ("api/crear/encabezado")
     public void crearEncabezado (@RequestBody Encabezado enc){
         encaServ.crearEncabezado(enc);
     }
   
-    @PutMapping ("/editar/encabezado")
+    @PutMapping ("api/editar/encabezado")
     public void editarEncabezado (@RequestBody Encabezado enc){
         encaServ.editarEncabezado(enc);
     }
