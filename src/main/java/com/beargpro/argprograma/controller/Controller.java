@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class Controller {
     @Autowired
     private IEncabezadoService encaServ;
