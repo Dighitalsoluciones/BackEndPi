@@ -9,19 +9,25 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EncabezadoService implements IEncabezadoService {
-    
-    @Autowired
-    public EncabezadoRepository encaRepo;
+    @Autowired EncabezadoRepository encaRepo;
 
     @Override
     public List<Encabezado> verEncabezado() {
-        return encaRepo.findAll();
+        List<Encabezado> encabezado = encaRepo.findAll();
+        return encabezado;
     }
 
     @Override
-    public void crearEncabezado(Encabezado enc) {
-       encaRepo.save(enc);
+    public void crearEncabezado(Encabezado encabezado) {
+       encaRepo.save(encabezado);
     }
+    
+    @Override
+    public Encabezado buscarEncabezado(Long id){
+       Encabezado encabezado = encaRepo.findById(id).orElse(null);
+       return encabezado;
+    }
+    
     
     @Override
     public void editarEncabezado(Encabezado enc) {

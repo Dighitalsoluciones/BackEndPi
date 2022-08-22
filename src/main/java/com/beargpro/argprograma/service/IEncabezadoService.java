@@ -11,5 +11,6 @@ public interface IEncabezadoService {
     public void crearEncabezado (Encabezado enc);
     public void editarFotoperfil (Encabezado enc);
     public void editarEncabezado (Encabezado enc);
+    public Encabezado buscarEncabezado(Long id);
     
 }
